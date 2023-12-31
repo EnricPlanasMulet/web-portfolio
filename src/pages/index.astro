@@ -1,15 +1,20 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import NavBar from '../components/NavBar.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import NavBar from "../components/NavBar.astro";
+import Hero from "../components/Hero.astro";
+
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<NavBar />
-	</main>
+<Layout title="Enric Planas | Full-Stack Developer, UX&UI Design">
+  <main>
+    <NavBar />
+    <div class="flex flex-col items-center">
+      <section class="w-[750px] lg:w-[1024px]">
+        <Hero />
+      </section>
+    </div>
+  </main>
 </Layout>
 
-<style>
-	
-</style>
+<style></style>
