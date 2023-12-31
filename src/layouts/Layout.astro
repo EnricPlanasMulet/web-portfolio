@@ -3,7 +3,7 @@ interface Props {
   title: string;
 }
 // Supports weights 100-900
-import '@fontsource-variable/inter';
+import "@fontsource-variable/inter";
 const { title } = Astro.props;
 ---
 
@@ -19,7 +19,7 @@ const { title } = Astro.props;
   </head>
   <body>
     <div
-      class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+      class="absolute top-0 z-[-2] h-screen w-screen max-w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
     >
       <slot />
     </div>
@@ -29,7 +29,7 @@ const { title } = Astro.props;
   :root {
     color-scheme: dark light;
     --white: #f0f0f0;
-    --accent: 136, 58, 234;
+    --accent: #7085de;
     --accent-light: 224, 204, 250;
     --accent-dark: 49, 10, 101;
     --accent-gradient: linear-gradient(
@@ -40,9 +40,10 @@ const { title } = Astro.props;
     );
   }
   html {
-    font-family: 'Inter Variable', system-ui, sans-serif;
+    font-family: "Inter Variable", system-ui, sans-serif;
     background: #0a0a0a;
     background-size: 224px;
+    scroll-behavior: smooth;
   }
   code {
     font-family:
@@ -54,5 +55,10 @@ const { title } = Astro.props;
       Bitstream Vera Sans Mono,
       Courier New,
       monospace;
+  }
+  @media (prefers-reduced-motion) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 </style>

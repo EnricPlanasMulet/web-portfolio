@@ -1,0 +1,35 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "December 2022 - Present",
+    title: "Founder of Parkex | Barcelona",
+    description:
+      "Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.",
+    link: "https://enricplanasmulet.github.io/ParkexWeb/",
+  },
+  {
+    date: "September 2019 - Present",
+    title: "Joint Honours Degree Computer Engineering & Video Game Design and Production | Tecnocampus, Mataró",
+    description:
+      "It prepares professionals for the multidisciplinary video game sector that includes design, art, production and game development. As a computer engineer, the graduate will also be an expert in web and mobile programming, the administration of networks and servers, the development of cloud services and the management of projects and equipment.",
+  },
+  {
+    date: "September 2021 - July 2023",
+    title: "Unity Videogame Developer | DiStudio, Barcelona",
+    description:
+      "I contributed to the development of video games at an indie studio, collaborating with a team of 5 people. My role involved programming, art, game design and sound design aspects for both 2D and 3D projects.",
+    link: "https://www.linkedin.com/company/distudiogames/"
+  },
+]
+---
+
+<ol class="relative border-s border-white/40 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-6">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
