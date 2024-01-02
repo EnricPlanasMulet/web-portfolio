@@ -4,13 +4,15 @@ import Card from "../components/Card.astro";
 import NavBar from "../components/NavBar.astro";
 import Hero from "../components/Hero.astro";
 import Experience from "../components/Experience.astro";
+import Footer from "../components/Footer.astro";
+import Skillset from "../components/Skillset.astro";
 ---
 
 <Layout title="Enric Planas | Full-Stack Developer, UX&UI Design">
   <main>
     <NavBar />
-    <div class="flex flex-col items-center gap-48">
-      <section id="AboutMe" class="max-w-[600x] lg:max-w-[1050px]  mt-48">
+    <div class="flex flex-col items-center gap-52">
+      <section id="AboutMe" class="max-w-[600x] lg:max-w-[1050px] mt-48">
         <Hero />
       </section>
       <section id="Experience" class="max-w-[600px] lg:max-w-[700px]">
@@ -35,6 +37,32 @@ import Experience from "../components/Experience.astro";
            Experience
         </h2>
         <Experience />
+      </section>
+      <section id="Skillset" class="max-w-[700px] lg:max-w-[1050px]">
+        <h2
+          class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-[--white] justify-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-stack-2"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M12 4l-8 4l8 4l8 -4l-8 -4"></path><path d="M4 12l8 4l8 -4"
+            ></path><path d="M4 16l8 4l8 -4"></path></svg
+          >
+           Skill Set
+        </h2>
+        <Skillset />
+      </section>
+      <section class="w-full">
+        <Footer />
       </section>
     </div>
   </main>

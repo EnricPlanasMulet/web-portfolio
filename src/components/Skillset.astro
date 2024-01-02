@@ -1,0 +1,109 @@
+---
+const BACKEND = [
+  "Java",
+  "Python",
+  "C#",
+  "C++",
+  "Spring Framework",
+  "Scikit-learn",
+  "Machine Learning",
+  "AWS",
+  "Docker",
+  "PostgreSQL",
+  "OracleSQL",
+  "Database Design",
+  "Data Architecture",
+  "Software Engineering",
+  "Network Engineering",
+  "Wireshark",
+  "Packet Tracer",
+  "Linux",
+  "Bash",
+  "Oracle VirtualBox",
+  "Raspberry Pi",
+  "Arduino",
+];
+const FRONTEND = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Tailwind CSS",
+  "Astro",
+  "NodeJS",
+  "NextJS",
+  "ReactJS",
+  "React Native",
+  "Android Studio",
+  "XCode",
+  "Swift",
+  "Figma",
+  "Adobe Illustrator",
+
+];
+const VIDEOGAMES = [
+  "Unity 3D",
+  "Unity 2D",
+  "Unreal Engine",
+  "Defold",
+  "Autodesk 3ds Max",
+  "Blender",
+  "Mudbox",
+  "Substance Painter",
+  "Substance Designer",
+  "Adobe Photoshop",
+  "Pixel Art",
+  "Game Design",
+  "Level Design",
+  "Sound Design",
+  "Fmod",
+];
+---
+
+<div class="w-full grid grid-cols-3 gap-x-10 items-stretch  m-auto justify-between  mt-10">
+    <!--border border-white/10 bg-gradient-to-b from-[#ffffff05] to-[#ffffff02] glow backdrop-blur-lg-->
+    <div class="block h-fit rounded-lg  ">
+    <h3 class="text-lg font-semibold dark:text-[--white] mb-3 text-center">Frontend</h3>
+    <ul class="flex flex-wrap gap-2 justify-center">
+      {
+        FRONTEND.map((experiencie) => (
+          <span class="bg-indigo-100 text-indigo-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300 h-fit  transition select-none hover:scale-[1.1] hover:border-indigo-300/40 border border-indigo-900">
+            {experiencie}
+          </span>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="block h-fit rounded-lg ">
+    <h3 class="text-lg font-semibold dark:text-[--white] mb-3 text-center">Backend</h3>
+    <ul class="flex flex-wrap gap-2 justify-center">
+      {
+        BACKEND.map((experiencie) => (
+          <span class="bg-green-100 text-green-800 text-xs font-medium mx-1 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300 h-fit  transition select-none hover:scale-[1.1] hover:border-green-300/40 border border-green-900">
+            {experiencie}
+          </span>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="block h-fit rounded-lg ">
+    <h3 class="text-lg font-semibold dark:text-[--white] mb-3 text-center">Videogames</h3>
+    <ul class="flex flex-wrap gap-2 justify-center">
+      {
+        VIDEOGAMES.map((experiencie) => (
+          <span class="bg-green-100 text-green-800 text-xs font-medium ms-2 px-2.5 py-0.5 rounded dark:bg-amber-800 dark:text-amber-300 h-fit transition select-none hover:scale-[1.1] hover:border-amber-300/40 border border-amber-800">
+            {experiencie}
+          </span>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<style>
+  .glow {
+    --tw-shadow: 0 20px 50px -12px rgba(255, 255, 255, 0.015);
+    --tw-shadow-colored: 0 20px 40px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+</style>
