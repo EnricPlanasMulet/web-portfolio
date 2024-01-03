@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-blur::after {
+  @apply absolute inset-[-4px] z-[-1] bg-gradient-to-r from-[#687bdd] via-[#221e22] to-[#e90e45];
+  content: "";
+  transform: skewX(3deg) skewY(6deg);
+  filter: blur(50px);
+}

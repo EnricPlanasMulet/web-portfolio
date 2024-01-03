@@ -5,9 +5,9 @@ import VideoExperience from "./VideoExperience.astro";
 const BACKEND = [
   "Java",
   "Python",
-  "C#",
   "C++",
   "Spring Framework",
+  "REST",
   "Scikit-learn",
   "Machine Learning",
   "AWS",
@@ -37,14 +37,14 @@ const FRONTEND = [
   "ReactJS",
   "React Native",
   "Android Studio",
-  "XCode",
+  "Xcode",
   "Swift",
   "Figma",
   "Adobe Illustrator",
 ];
 const VIDEOGAMES = [
-  "Unity 3D",
-  "Unity 2D",
+  "Unity",
+  "C#",
   "Unreal Engine",
   "Defold",
   "Autodesk 3ds Max",
@@ -62,14 +62,15 @@ const VIDEOGAMES = [
 ---
 
 <div
-  class="w-full grid grid-cols-3 gap-x-10 items-stretch m-auto justify-between mt-10"
+  class="w-full grid grid-row-3 gap-y-14 items-stretch m-auto justify-between mt-4"
 >
   <!--border border-white/10 bg-gradient-to-b from-[#ffffff05] to-[#ffffff02] glow backdrop-blur-lg-->
   <div class="block h-fit rounded-lg">
-    <h3 class="text-xl font-semibold dark:text-[--white] mb-3 text-center">
+    <h3 class="text-xl font-semibold dark:text-[--white] mb-3">
       Frontend
     </h3>
-    <ul class="flex flex-wrap gap-2 justify-center">
+    <hr class="mb-4 sm:mx-auto border-white/20 " />
+    <ul class="flex flex-wrap gap-2">
       {
         FRONTEND.map((experiencie) => (
           <FrontExperience>{experiencie}</FrontExperience>
@@ -78,10 +79,11 @@ const VIDEOGAMES = [
     </ul>
   </div>
   <div class="block h-fit rounded-lg">
-    <h3 class="text-xl font-semibold dark:text-[--white] mb-3 text-center">
+    <h3 class="text-xl font-semibold dark:text-[--white] mb-3">
       Backend
     </h3>
-    <ul class="flex flex-wrap gap-2 justify-center">
+    <hr class="mb-4 sm:mx-auto border-white/20 " />
+    <ul class="flex flex-wrap gap-2">
       {
         BACKEND.map((experiencie) => (
           <BackExperience>{experiencie}</BackExperience>
@@ -90,10 +92,11 @@ const VIDEOGAMES = [
     </ul>
   </div>
   <div class="block h-fit rounded-lg">
-    <h3 class="text-xl font-semibold dark:text-[--white] mb-3 text-center">
+    <h3 class="text-xl font-semibold dark:text-[--white] mb-3">
       Videogames
     </h3>
-    <ul class="flex flex-wrap gap-2 justify-center">
+    <hr class="mb-4 sm:mx-auto border-white/20 " />
+    <ul class="flex flex-wrap gap-2">
       {
         VIDEOGAMES.map((experiencie) => (
           <VideoExperience>{experiencie}</VideoExperience>

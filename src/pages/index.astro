@@ -6,6 +6,11 @@ import Hero from "../components/Hero.astro";
 import Experience from "../components/Experience.astro";
 import Footer from "../components/Footer.astro";
 import Skillset from "../components/Skillset.astro";
+import SkillsetAco from "../components/SkillsetAco.astro";
+import BlurImage from "../components/BlurImage.astro";
+import SkillsetFinal from "../components/SkillsetFinal.astro";
+import Projects from "../components/ProjectItem.astro";
+import ProjectItem from "../components/ProjectItem.astro";
 ---
 
 <Layout title="Enric Planas | Full-Stack Developer, UX&UI Design">
@@ -38,9 +43,38 @@ import Skillset from "../components/Skillset.astro";
         </h2>
         <Experience />
       </section>
-      <section id="Skillset" class="max-w-[700px] lg:max-w-[1050px]">
+      <section
+        id="Projects"
+        class="max-w-[700px] lg:max-w-[1050px] justify-start mt-[-2.5rem]"
+      >
         <h2
-          class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-[--white] justify-center"
+          class="text-3xl font-semibold mb-8 flex gap-x-3 items-center text-[--white]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-code"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path
+              d="M14 4l-4 16"></path></svg
+          >
+           Projects
+        </h2>
+        <ProjectItem />
+      </section>
+      <section
+        id="Skillset"
+        class="max-w-[700px] lg:max-w-[700px] "
+      >
+        <h2
+          class="text-3xl font-semibold flex gap-x-3 mb-6 items-center text-[--white]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -59,13 +93,39 @@ import Skillset from "../components/Skillset.astro";
           >
            Skill Set
         </h2>
-        <Skillset />
-      </section>
-      <section class="w-full">
-        <Footer />
+        <SkillsetFinal />
       </section>
     </div>
+    <section class="w-full">
+      <Footer />
+    </section>
   </main>
 </Layout>
 
-<style></style>
+<style>
+  #bg-blur {
+    position: relative;
+    z-index: 0; /* We force a stacking context */
+  }
+  /* Creates the shadow */
+  #bg-blur::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    inset: -5px;
+    transform: translate(10px, 8px);
+    background: "rgba(255, 255, 255, 0.2)";
+    filter: blur(10px);
+  }
+  /* Reproduces the main element styles */
+  #bg-blur::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    /* Inherit all the decorations defined on the main element */
+    background: inherit;
+    border: inherit;
+    box-shadow: inherit;
+  }
+</style>

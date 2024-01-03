@@ -1,0 +1,26 @@
+---
+import ProjectItem from "./ProjectItem.astro";
+const PROJECTS = [
+  {
+    title: "Project 1",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.",
+  },
+  {
+    title: "Project 1",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.",
+  },
+];
+
+---
+
+<ol class="relative border-s border-white/40 ml-3">
+  {
+    PROJECTS.map((experiencie) => (
+      <li class="mb-10 ms-6">
+        <ProjectItem {experiencie.description} {experience.title}/>
+      </li>
+    ))
+  }
+</ol>
