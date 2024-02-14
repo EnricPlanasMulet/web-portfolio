@@ -14,7 +14,7 @@ import ProjectItem from "../components/ProjectItem.astro";
 ---
 
 <Layout title="Enric Planas | Full-Stack Developer, UX&UI Design">
-  <main>
+  <main class="max-[1150px]:hidden">
     <NavBar />
     <div class="flex flex-col items-center gap-52">
       <section id="AboutMe" class="max-w-[600x] lg:max-w-[1050px] mt-48">
@@ -39,39 +39,36 @@ import ProjectItem from "../components/ProjectItem.astro";
               d="M11 19h5.5a3.5 3.5 0 0 0 0 -7h-8a3.5 3.5 0 0 1 0 -7h4.5"
             ></path></svg
           >
-           Experience
+          Experience
         </h2>
         <Experience />
       </section>
-      <section
-      id="Skillset"
-      class="max-w-[700px] lg:max-w-[700px] "
-    >
-      <h2
-        class="text-3xl font-semibold flex gap-x-3 mb-6 items-center text-[--white]"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-stack-2"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-            d="M12 4l-8 4l8 4l8 -4l-8 -4"></path><path d="M4 12l8 4l8 -4"
-          ></path><path d="M4 16l8 4l8 -4"></path></svg
+      <section id="Skillset" class="max-w-[700px] lg:max-w-[700px]">
+        <h2
+          class="text-3xl font-semibold flex gap-x-3 mb-6 items-center text-[--white]"
         >
-         Skill Set
-      </h2>
-      <SkillsetFinal />
-    </section>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-stack-2"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M12 4l-8 4l8 4l8 -4l-8 -4"></path><path d="M4 12l8 4l8 -4"
+            ></path><path d="M4 16l8 4l8 -4"></path></svg
+          >
+          Skill Set
+        </h2>
+        <SkillsetFinal />
+      </section>
       <section
         id="Projects"
-        class="max-w-[700px] lg:max-w-[1050px] justify-start "
+        class="max-w-[700px] lg:max-w-[1050px] justify-start"
       >
         <h2
           class="text-3xl font-semibold mb-8 flex gap-x-3 items-center text-[--white]"
@@ -91,16 +88,20 @@ import ProjectItem from "../components/ProjectItem.astro";
               d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path
               d="M14 4l-4 16"></path></svg
           >
-           Projects
+          Projects
         </h2>
         <ProjectItem />
       </section>
-
     </div>
     <section class="w-full">
       <Footer />
     </section>
   </main>
+  <div class="hidden max-[1150px]:block h-screen">
+    <div class="flex justify-center align-middle items-center h-full">
+      <h2 class=" text-2xl font-medium text-slate-300/85">Mobile version not available yet 😵</h2>
+    </divcla>
+  </div>
 </Layout>
 
 <style>
